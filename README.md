@@ -4,6 +4,9 @@
 
 In this study project i'm using you free API
 
+
+> And  Thanks so much to florinpop17 (https://www.youtube.com/channel/UCeU-1X402kT-JlLdAitxSMA), your videos is helping me a lot!
+
 ********************
 
 Is not finishd yet, in the next few days i'll finish the last features
