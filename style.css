@@ -41,7 +41,7 @@ header
 
 header input
 {
-    background-color: #fff7f7;
+    background-color: #eee;
     border: none;
     border-radius: 3px;
     padding: 0.5rem 1rem;
@@ -52,16 +52,16 @@ header button
 {
     background-color: transparent;
     border: none;
-    color: #aaa;
-    font-size: 2rem;
+    color:rgb(138, 129, 141);
+    font-size: 1.5rem;
     margin-left: 10px;
 }
 
 .fav-container
-{
-    display: flex;
+{   
     padding: 0.25rem 1rem;
-    background-color: rgb(243, 225, 255);;
+    background-color: rgb(243, 225, 255);
+    text-align: center;
 
 }
 
@@ -76,13 +76,33 @@ header button
 
 .fav-meals li
 {
-    width: 85px;
+    width: 75px;
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+}
+
+.fav-meals li .clear
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    font-size: 1.2rem;
+}
+
+.fav-meals li:hover .clear
+{
+    opacity: 1;
 }
 
 .fav-meals li img
 {
     border: 2px solid #ffffffff;
-    box-shadow: #3333331a;
+    box-shadow: 0 0 10px 2px #3333331a;
     border-radius: 50%;
     object-fit: cover;
     height: 70px;
@@ -92,16 +112,22 @@ header button
 
 .fav-meals li span
 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
 
 }
 
 .meal
 {
-    margin: 10px;
-    border-radius: 3px;
-    box-shadow: #3333331a;
     margin: 1.5rem;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px #3333331a;
+    margin: 1.5rem;
+    overflow: hidden;
 
 
 }
@@ -113,7 +139,7 @@ header button
 }
 .meal-header .random
 {
-    position: relative;
+    position: absolute;
     top: 1rem;
     background-color: #fff;
     padding: 0.25rem 1rem;
@@ -133,7 +159,7 @@ header button
 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1rem;
 }
 
@@ -142,16 +168,66 @@ header button
     margin: 0;
 }
 
-.meal-body  .fav-btn
+.meal-body .fav-btn
 {
     border: none;
     background-color: transparent;
     font-size: 1.2rem;
-    color: gray;
+    color: rgb(197, 188, 188);;
     cursor: pointer;
 }
 
 .meal-body  .fav-btn.active
 {
     color: rebeccapurple;
+}
+
+.popup-container
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+}
+
+.popup-container.hidden
+{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup
+{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: relative;
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 600px;
+    width: 100%;
+
+}
+
+.popup .close-popup
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.meal-info h1
+{
+    text-align: center;
+
 }
